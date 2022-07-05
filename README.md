@@ -8,6 +8,30 @@
 - Github flow
 - VSCode
 
+## Getting Started
+- git clone https://github.com/dumbledorep/Hello-Microverse.git
+## Github Actions set-up:
+- In the first commit of your feature branch create a .github/workflows folder and add a copy of .github/workflows/linters.yml to that folder.
+Remember to use the file linked above
+Remember that .github folder starts with a dot.
+## Set-up linters in your local env
+Note: The npm package manager is going to create a node_modules directory to install all of your dependencies. You shouldn't commit that directory. To avoid that, you can create a .gitignore file and add node_modules to it:
+      # .gitignore
+      node_modules/
+## Webhint
+NOTE: If you are running on Windows, you need to initialize npm to create package.json file.
+- Run this code to create the package.json file: npm init -y
+- Run npm install --save-dev hint@7.x
+- Copy .hintrc to the root directory of your project.
+- Run npx hint .
+## Stylelint
+- Run npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
+- Copy .stylelintrc.json to the root directory of your project.
+- Run npx stylelint "**/*.{css,scss}" on the root of your directory of your project.
+- Fix linter errors
+
+With that being done you are good to issue a pull request if need be.
+
 ## Author
 
 👤 **Philip Kweku Assan**
